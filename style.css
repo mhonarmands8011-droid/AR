@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Vazirmatn',sans-serif;
+    background:linear-gradient(180deg,#fdfbf8,#f4efe8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+/* هاله های پس زمینه */
+
+.bg1,
+.bg2{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+.bg1{
+    width:350px;
+    height:350px;
+    background:#ff9b42;
+    top:-120px;
+    right:-120px;
+    opacity:.45;
+}
+
+.bg2{
+    width:280px;
+    height:280px;
+    background:#ffd9b0;
+    bottom:-90px;
+    left:-90px;
+    opacity:.65;
+}
+
+/* کارت */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:25px;
+}
+
+.card{
+
+    width:100%;
+    max-width:420px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:35px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+
+}
+/* لوگو */
+
+.logo{
+
+    color:#d96b2b;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+
+}
+
+.subtitle{
+
+    color:#888;
+
+    display:block;
+
+    margin-top:5px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+/* عنوان */
+
+h1{
+
+    color:#222;
+
+    font-size:28px;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+/* متن */
+
+p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+/* جای محصول */
+
+.product-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+
+}
+
+.product-placeholder{
+
+    width:170px;
+
+    height:220px;
+
+    border-radius:35px;
+
+    background:linear-gradient(180deg,#ffb45c,#d96b2b);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    box-shadow:0 20px 40px rgba(217,107,43,.35);
+
+    animation:float 4s ease-in-out infinite;
+
+}
+/* دکمه ها */
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-family:'Vazirmatn',sans-serif;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    margin-top:15px;
+
+}
+
+.ar-btn{
+
+    background:linear-gradient(135deg,#ff9533,#d96b2b);
+
+    color:#fff;
+
+    box-shadow:0 15px 30px rgba(217,107,43,.30);
+
+}
+
+.ar-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.info-btn{
+
+    background:#fff3e6;
+
+    color:#d96b2b;
+
+    border:2px solid #d96b2b;
+
+}
+
+.info-btn:hover{
+
+    background:#d96b2b;
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+.footer{
+
+    margin-top:28px;
+
+    color:#999;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
