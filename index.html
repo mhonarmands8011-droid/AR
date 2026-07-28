@@ -1,57 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beauty Prime AR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+<title>Beauty Prime</title>
 
-  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+<style>
 
-  <script defer src="script.js"></script>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(180deg,#ffffff,#fff8f2);
+
+overflow:hidden;
+
+}
+
+.container{
+
+width:90%;
+max-width:420px;
+
+text-align:center;
+
+padding:40px 30px;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.6);
+
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+animation:fadeIn 1s ease;
+
+}
+
+.logo{
+
+width:130px;
+
+margin-bottom:20px;
+
+animation:slideDown 1s ease;
+
+}
+
+h1{
+
+color:#f28c28;
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+p{
+
+font-size:17px;
+
+color:#666;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+}
+
+.button{
+
+display:block;
+
+width:100%;
+
+padding:18px;
+
+margin:15px 0;
+
+text-decoration:none;
+
+font-size:19px;
+
+font-weight:bold;
+
+border-radius:18px;
+
+transition:.35s;
+
+backdrop-filter:blur(15px);
+
+}
+
+.ar{
+
+background:rgba(242,140,40,.9);
+
+color:white;
+
+box-shadow:0 10px 25px rgba(242,140,40,.35);
+
+}
+
+.ar:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 18px 30px rgba(242,140,40,.45);
+
+}
+
+.site{
+
+background:rgba(255,255,255,.65);
+
+border:2px solid #f28c28;
+
+color:#f28c28;
+
+}
+
+.site:hover{
+
+background:#f28c28;
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+.footer{
+
+margin-top:30px;
+
+font-size:14px;
+
+color:#999;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes slideDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<a-scene
-  mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
-  color-space="sRGB"
-  renderer="colorManagement: true;"
-  vr-mode-ui="enabled: false"
-  device-orientation-permission-ui="enabled: false">
+<div class="container">
 
-  <a-assets>
 
-    <video
-      id="tutorialVideo"
-      src="assets/tutorial.mp4"
-      preload="auto"
-      playsinline
-      webkit-playsinline
-      crossorigin="anonymous"
-      loop>
-    </video>
+<h1>Prime</h1>
 
-  </a-assets>
+<p>
 
-  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+به تجربه هوشمند بسته‌بندی خوش آمدید<br>
 
-  <a-entity id="target" mindar-image-target="targetIndex: 0">
+لطفاً یکی از گزینه‌های زیر را انتخاب کنید.
 
-    <a-video
-    id="videoPlane"
-    src="#tutorialVideo"
-    width="2"
-    height="3.55"
-    position="0 0 0"
-    rotation="0 0 0">
-</a-video>
+</p>
 
-  </a-entity>
+<a class="button ar" href="ar.html">
 
-</a-scene>
+🎥 مشاهده آموزش محصول با AR
+
+</a>
+
+<a class="button site"
+
+href="https://beautyprimee.ir"
+
+target="_blank">
+
+🌐 ورود به وب‌سایت Beauty Prime
+
+</a>
+
+<div class="footer">
+
+Smart Packaging Experience
+
+</div>
+
+</div>
 
 </body>
 </html>
